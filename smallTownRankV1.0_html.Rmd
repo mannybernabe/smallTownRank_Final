@@ -6,6 +6,7 @@ output: html_document
 
 ![My Figure](IMAGES/burbsimage.jpg)
 
+
 Suburbs or city? It’s a first-date type of question.  Yes, it’s that important.  Luckily, both my wife and I have always been amicable to the “burbs”, and while we haven't made the move just yet, it’s certainly on the the horizon.  That’s why I was happy see WalletHub’s [comprehensive study](http://wallethub.com/edu/best-worst-small-cities-to-live-in/16581/) ranking the best and worst small towns in America.  WalletHub looks at 22 metrics to rank towns on affordability, economic health, education & health and quality of life and gives each town an overall score (check out WalletHub’s full [methodology](https://wallethub.com/edu/best-worst-small-cities-to-live-in/16581/#methodology) ).  
 
 Data on 1,200 towns is cool, but I care mostly about suburbs in Chicago-land area.  I scrape the data from the study’s results, and subset to suburbs within 60 driving miles of downtown Chicago. Only towns with populations between 25,000 and 100,000 residents were included in WalletHub’s study.  Unfortunately, that excludes larger suburbs like Naperville, and smaller suburbs like Western Springs from the analysis.
