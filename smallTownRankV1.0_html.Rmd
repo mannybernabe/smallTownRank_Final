@@ -1,0 +1,49 @@
+---
+output: html_document
+---
+
+# Best Suburbs Near Chicago
+
+Suburbs or city? It’s a first-date type of question.  Yes, it’s that important.  Luckily, both my wife and I have always been amicable to the “burbs”, and while we haven't made the move just yet, it’s certainly on the the horizon.  That’s why I was happy see WalletHub’s [comprehensive study](http://wallethub.com/edu/best-worst-small-cities-to-live-in/16581/) ranking the best and worst small towns in America.  WalletHub looks at 22 metrics to rank towns on affordability, economic health, education & health and quality of life and gives each town an overall score (check out WalletHub’s full [methodology](https://wallethub.com/edu/best-worst-small-cities-to-live-in/16581/#methodology) ).  
+
+Data on 1,200 towns is cool, but I care mostly about suburbs in Chicago-land area.  I scrape the data from the study’s results, and subset to suburbs within 60 driving miles of downtown Chicago. Only towns with populations between 25,000 and 100,000 residents were included in WalletHub’s study.  Unfortunately, that excludes larger suburbs like Naperville, and smaller suburbs like Western Springs from the analysis.
+
+<br>
+
+<center> <h4>Suburbs Near Chicago (Interactive Table)</h4> </center>
+
+```{r setOptions, message=FALSE,echo=F}
+library(googleVis)
+op <- options(gvis.plot.tag='chart')
+```
+
+```{r ComboExample, results='asis', tidy=FALSE, echo=FALSE}
+load("PLOTS/tablePlot")
+
+plot(townTable)
+```
+
+<br>
+
+## The Trade Off 
+
+I also wanted to compare a suburb’s overall score with its distance from downtown Chicago.  In general, I’d have a bias towards being closer to Chicago.  Even if you live in the burbs, you’ll likely commute into the City for work and social obligations will have you visiting the City on a regular basis. 
+<br>
+
+<center> <h4>Overall Scores Vs. Distance from Downtown Chicago (Interactive Scatterplot)</h4> </center>
+
+```{r set-options, echo=FALSE, cache=FALSE}
+options(RCHART_WIDTH = 1000, RCHART_HEIGHT = 400)
+```
+
+```{r, echo=FALSE, cache=F, results='asis', comment=NA}
+load("PLOTS/scatterPlot")
+
+scatterPlot$print('chart1', include_assets=T)
+
+```
+
+For the code, please visit my github.
+
+
+
