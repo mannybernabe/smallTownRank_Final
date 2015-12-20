@@ -46,7 +46,7 @@ scatterPlot$print('chart1', include_assets=T)
 
 ```
 
-For the code, please visit my github.
+For the code, please visit my [github profile](https://github.com/mannybernabe/smallTownRank_Final).
 
 
 
