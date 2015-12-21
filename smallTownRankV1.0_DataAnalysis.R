@@ -76,6 +76,10 @@ ifelse(smallTown.df[,4]>=mean(smallTown.df[,4]),"Far","Near"))
 
 smallTown.df<-cbind.data.frame(smallTown.df, newCluster)
 
+smallTown.df%>%
+  filter(newCluster=="Above Avg. Score, Near")%>%
+  select(city,overallScore,distance)
+
 
 
 rm(list=setdiff(ls(), "smallTown.df"))
